@@ -1,0 +1,19 @@
+{
+  "name": "xneek-modules",
+  "version": "1.0.0",
+  "description": "scrips and styles files dynamicly load into DOM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xneek/modules.git"
+  },
+  "author": "xneek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xneek/modules/issues"
+  },
+  "homepage": "https://github.com/xneek/modules#readme"
+}
