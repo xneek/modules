@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/xneek/modules/issues"
   },
-  "homepage": "https://github.com/xneek/modules#readme"
+  "homepage": "https://github.com/xneek/modules#readme",
+  "dependencies": {
+    "promise-polyfill": "^4.0.3",
+    "xneek-crel": "^2.0.1"
+  }
 }
