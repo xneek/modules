@@ -19,5 +19,11 @@
   "dependencies": {
     "promise-polyfill": "^4.0.3",
     "xneek-crel": "^2.0.1"
-  }
+  },
+  	"ignore": [
+		"bower.json",
+		"README.md",
+		"vendors",
+		"examples"
+	]
 }
