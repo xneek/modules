@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+</head>
+<body>
+	
+	<p>Simply modules. Use native DOM</p>
+	<small>see console ( CTRL + SHIFT+  J )</small>
+	<hr>
+	<button onclick="func1()">Подключить модуль 1</button>
+	<button onclick="func2()">Подключить модули 2 и 3</button>
+	<button onclick="func3()">Подключить модуль 4</button>
+
+
+
+	<script src="../vendors/crel.js"></script> <!-- Зависимость. Можно не поделючать если использовать версию с постфиксом depfree -->
+	<script src="../modules.api.callback.js"></script> <!-- Работа с модулями -->
+	<script src="modules.define.js"></script> <!-- определение модулей -->
+	<script>
+		var func1,func2,func3;
+		func1 = function(){
+			modules.use('m1', function(){ console.log("Callback for module m1"); })
+		}
+		func2 = function(){
+			modules.use('m2', function(){ console.log("Callback for m2"); })
+		}
+		func3 = function(){
+			modules.use('m3', function(){ console.log("Callback for m3"); })
+		}
+	</script>
+</body>
+</html>
