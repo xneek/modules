@@ -1,7 +1,6 @@
 modules = {
 	list:{},
 	use: function(name){ //return promise
-
 		var include = function(src, cb, nochache){
 		  var i=0, include_one;
 		  var hasStylesheet = function(filename){
@@ -127,10 +126,8 @@ modules = {
 			};
 
 			var loadDependencies = function (dependArr, cbld){
-
 				if(!dependArr || dependArr.length===0){cbld(); return false;}
 				console.log('Dependencies',dependArr);
-				
 				var loadOneDep =  function(depss, index, _cb){
 					if(!depss){_cb()}
 					modules.use(depss[index])
@@ -144,10 +141,7 @@ modules = {
 					})
 
 				}
-
 				loadOneDep(dependArr, 0, cbld);
-
-
 			}
 
 			if( typeof modules.list[name] === 'undefined' ){ console.log("Module -s is not defined", name); return false;}
@@ -156,8 +150,6 @@ modules = {
 			var func = functionExist(modules.list[name].func) ;
 
 			if(  typeof func != 'undefined' ){
-
-				if( typeof callback === 'function' ){ callback(func); }
 				good.call(func);
 			}
 
@@ -177,7 +169,6 @@ modules = {
 					console.timeEnd('LoadModule_'+name);
 					var func = functionExist(modules.list[name].func) ;
 					if(typeof modules.list[name].afterLoad === 'function'){ modules.list[name].afterLoad();}
-					if( typeof callback === 'function' ){ callback(func); }
 					good.call(func);
 				})
 			});
