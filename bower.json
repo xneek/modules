@@ -1,0 +1,16 @@
+{
+	"name": "modules-xneek",
+	"description": "Simply assync JS & CSS files loader",
+	"keywords": ["DOM", "ASSYNC","MODULES"],
+	"main": [
+		"modules.api.callback.js"
+	],
+	"ignore": [
+		"bower.json",
+		"README.md",
+		"vendors",
+		"examples"
+	],
+	"dependencies": {},
+	"devDependencies": {}
+}
